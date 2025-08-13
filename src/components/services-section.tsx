@@ -112,7 +112,7 @@ export default function ServicesSection() {
 
                   <div className="space-y-3">
                     <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wide">
-                      What's included:
+                      What&apos;s included:
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (

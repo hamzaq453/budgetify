@@ -26,11 +26,30 @@ export default function ContactFormSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      const result = await response.json()
+
+      if (result.success) {
+        setIsSubmitted(true)
+      } else {
+        // Handle error - you might want to show an error message
+        console.error('Failed to send email:', result.message)
+        alert('Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error sending email:', error)
+      alert('Failed to send message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -45,7 +64,7 @@ export default function ContactFormSection() {
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Thank You!</h2>
             <p className="text-lg md:text-xl text-gray-600 mb-6">
-              We've received your message and will get back to you within 24 hours.
+              We&apos;ve received your message and will get back to you within 24 hours.
             </p>
             <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg mb-8">
               <h3 className="font-bold text-gray-900 mb-4 text-lg md:text-xl">What happens next?</h3>
@@ -54,7 +73,7 @@ export default function ContactFormSection() {
                   <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold text-blue-600">
                     1
                   </div>
-                  <span className="text-sm md:text-base text-gray-600">We'll review your information and prepare a custom strategy</span>
+                  <span className="text-sm md:text-base text-gray-600">We&apos;ll review your information and prepare a custom strategy</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold text-blue-600">
@@ -66,7 +85,7 @@ export default function ContactFormSection() {
                   <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-sm font-bold text-blue-600">
                     3
                   </div>
-                  <span className="text-sm md:text-base text-gray-600">We'll present your personalized marketing plan and pricing</span>
+                  <span className="text-sm md:text-base text-gray-600">We&apos;ll present your personalized marketing plan and pricing</span>
                 </div>
               </div>
             </div>
@@ -105,10 +124,10 @@ export default function ContactFormSection() {
               Request Your Free{" "}
               <span className="text-blue-600">Consultation</span>
             </h2>
-            <p className="max-w-[800px] text-lg md:text-xl text-gray-600 leading-relaxed mx-auto">
-              Tell us about your business and goals. We'll create a custom digital marketing strategy that fits your
-              budget and drives results.
-            </p>
+                              <p className="max-w-[800px] text-lg md:text-xl text-gray-600 leading-relaxed mx-auto">
+                    Tell us about your business and goals. We&apos;ll create a custom digital marketing strategy that fits your
+                    budget and drives results.
+                  </p>
           </div>
         </div>
 
@@ -118,7 +137,7 @@ export default function ContactFormSection() {
             <Card className="border border-gray-100 shadow-lg bg-white/90 backdrop-blur-sm">
               <CardHeader className="pb-4">
                 <CardTitle className="text-xl md:text-2xl font-bold">Get in Touch</CardTitle>
-                <CardDescription className="text-base">Ready to start growing your business? We're here to help.</CardDescription>
+                <CardDescription className="text-base">Ready to start growing your business? We&apos;re here to help.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
@@ -200,9 +219,9 @@ export default function ContactFormSection() {
           <div className="lg:col-span-2 order-1 lg:order-2">
             <Card className="border border-gray-100 shadow-lg bg-white/90 backdrop-blur-sm">
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl md:text-2xl font-bold">Let's Start the Conversation</CardTitle>
+                <CardTitle className="text-xl md:text-2xl font-bold">Let&apos;s Start the Conversation</CardTitle>
                 <CardDescription className="text-base">
-                  Fill out this quick form and we'll get back to you with a personalized strategy for your business.
+                  Fill out this quick form and we&apos;ll get back to you with a personalized strategy for your business.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -288,7 +307,7 @@ export default function ContactFormSection() {
                   </Button>
 
                   <p className="text-xs md:text-sm text-gray-500 text-center">
-                    By submitting this form, you agree to our privacy policy. We'll never share your information with
+                    By submitting this form, you agree to our privacy policy. We&apos;ll never share your information with
                     third parties.
                   </p>
                 </form>

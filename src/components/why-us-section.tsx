@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, DollarSign, Clock, Users, Award, Zap, CheckCircle, ArrowRight } from "lucide-react"
+import { Shield, DollarSign, Clock, Users, Award, Zap, CheckCircle } from "lucide-react"
 
 const advantages = [
   {
@@ -47,13 +46,13 @@ const advantages = [
   },
 ]
 
-const guarantees = [
-  "30-day money-back guarantee",
-  "Transparent monthly reporting",
-  "Direct access to your account manager",
-  "Custom strategy for your industry",
-  "Regular strategy optimization",
-]
+// const guarantees = [
+//   "30-day money-back guarantee",
+//   "Transparent monthly reporting",
+//   "Direct access to your account manager",
+//   "Custom strategy for your industry",
+//   "Regular strategy optimization",
+// ]
 
 export default function WhyUsSection() {
   return (
@@ -70,7 +69,7 @@ export default function WhyUsSection() {
               <span className="text-blue-600">Growing Businesses</span>
             </h2>
             <p className="max-w-[800px] text-lg md:text-xl text-gray-600 leading-relaxed mx-auto">
-              We're not just another marketing agency. Here's what makes us different and why hundreds of businesses
+              We&apos;re not just another marketing agency. Here&apos;s what makes us different and why hundreds of businesses
               trust us with their digital growth.
             </p>
           </div>
