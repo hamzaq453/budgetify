@@ -56,15 +56,15 @@ const advantages = [
 
 export default function WhyUsSection() {
   return (
-    <section id="why-us" className="w-full py-8 md:py-16 lg:py-24 bg-white">
+    <section id="why-us" className="w-full py-6 md:py-12 lg:py-16 bg-white">
       <div className="container px-4 md:px-6 lg:px-8 mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 lg:mb-16">
-          <div className="space-y-4 lg:space-y-6">
+        <div className="flex flex-col items-center justify-center space-y-3 text-center mb-8 lg:mb-12">
+          <div className="space-y-3 lg:space-y-4">
             <div className="inline-block rounded-full bg-green-100 px-4 py-2 text-sm text-green-800 font-medium shadow-sm">
               Why Choose Budgetify
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
               The Smart Choice for{" "}
               <span className="text-blue-600">Growing Businesses</span>
             </h2>
@@ -76,29 +76,29 @@ export default function WhyUsSection() {
         </div>
 
         {/* Main Advantages Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16 lg:mb-20">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-12 lg:mb-16">
           {advantages.map((advantage, index) => {
             const IconComponent = advantage.icon
             return (
               <Card
                 key={index}
-                className="relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 shadow-lg bg-white/90 backdrop-blur-sm group"
+                className="relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-300 shadow-lg bg-white/90 backdrop-blur-sm group"
               >
-                <CardHeader className="pb-4">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 shadow-lg flex-shrink-0 group-hover:shadow-xl transition-all duration-300">
-                      <IconComponent className="h-6 w-6 md:h-7 md:w-7 text-blue-600" />
+                <CardHeader className="pb-3">
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 shadow-lg flex-shrink-0 group-hover:shadow-xl transition-all duration-300">
+                      <IconComponent className="h-5 w-5 md:h-6 md:w-6 text-blue-600" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-lg md:text-xl lg:text-2xl font-bold mb-3 leading-tight">{advantage.title}</CardTitle>
-                      <div className="text-xs md:text-sm font-medium text-green-600 bg-green-50 px-3 py-1 rounded-full inline-block border border-green-100">
+                      <CardTitle className="text-base md:text-lg lg:text-xl font-bold mb-2 leading-tight">{advantage.title}</CardTitle>
+                      <div className="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full inline-block border border-green-100">
                         {advantage.highlight}
                       </div>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{advantage.description}</p>
+                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed">{advantage.description}</p>
                 </CardContent>
               </Card>
             )
@@ -106,56 +106,56 @@ export default function WhyUsSection() {
         </div>
 
         {/* Comparison Section */}
-        <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 text-white mb-16 lg:mb-20">
+        <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 text-white mb-12 lg:mb-16">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8 lg:mb-12">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+            <div className="text-center mb-6 lg:mb-8">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight">
                 Budgetify vs. Traditional Agencies
               </h3>
               <p className="text-gray-300 text-base md:text-lg">See how we stack up against the competition</p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="space-y-6">
-                <h4 className="text-xl md:text-2xl font-bold text-red-400 mb-6">Traditional Agencies</h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3 text-gray-300">
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="space-y-4">
+                <h4 className="text-lg md:text-xl font-bold text-red-400 mb-4">Traditional Agencies</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2 text-gray-300">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm md:text-base">High monthly retainers ($3,000+)</span>
+                    <span className="text-xs md:text-sm">High monthly retainers</span>
                   </li>
-                  <li className="flex items-start gap-3 text-gray-300">
+                  <li className="flex items-start gap-2 text-gray-300">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm md:text-base">Long-term contracts (12+ months)</span>
+                    <span className="text-xs md:text-sm">Long-term contracts (12+ months)</span>
                   </li>
-                  <li className="flex items-start gap-3 text-gray-300">
+                  <li className="flex items-start gap-2 text-gray-300">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm md:text-base">Slow implementation (30-60 days)</span>
+                    <span className="text-xs md:text-sm">Slow implementation (30-60 days)</span>
                   </li>
-                  <li className="flex items-start gap-3 text-gray-300">
+                  <li className="flex items-start gap-2 text-gray-300">
                     <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm md:text-base">Multiple account managers</span>
+                    <span className="text-xs md:text-sm">Multiple account managers</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="space-y-6">
-                <h4 className="text-xl md:text-2xl font-bold text-green-400 mb-6">Budgetify</h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base">Affordable pricing (starting at $149)</span>
+              <div className="space-y-4">
+                <h4 className="text-lg md:text-xl font-bold text-green-400 mb-4">Budgetify</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2 text-gray-300">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs md:text-sm">Affordable pricing</span>
                   </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base">Month-to-month flexibility</span>
+                  <li className="flex items-start gap-2 text-gray-300">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs md:text-sm">Month-to-month flexibility</span>
                   </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base">Fast setup (7-14 days)</span>
+                  <li className="flex items-start gap-2 text-gray-300">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs md:text-sm">Fast setup (7-14 days)</span>
                   </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base">Dedicated account manager</span>
+                  <li className="flex items-start gap-2 text-gray-300">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs md:text-sm">Dedicated account manager</span>
                   </li>
                 </ul>
               </div>

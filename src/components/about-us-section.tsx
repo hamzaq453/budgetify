@@ -35,15 +35,15 @@ const stats = [
 
 export default function AboutUsSection() {
   return (
-    <section id="about" className="w-full py-8 md:py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <section id="about" className="w-full py-6 md:py-12 lg:py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="container px-4 md:px-6 lg:px-8 mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 lg:mb-16">
-          <div className="space-y-4 lg:space-y-6">
+        <div className="flex flex-col items-center justify-center space-y-3 text-center mb-8 lg:mb-12">
+          <div className="space-y-3 lg:space-y-4">
             <div className="inline-block rounded-full bg-blue-100 px-4 py-2 text-sm text-blue-800 font-medium shadow-sm">
               About Budgetify
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
               Empowering Businesses to{" "}
               <span className="text-blue-600">Thrive Online</span>
             </h2>
@@ -55,13 +55,13 @@ export default function AboutUsSection() {
         </div>
 
         {/* Main Content */}
-        <div className="grid gap-8 lg:gap-12 xl:gap-16 lg:grid-cols-2 items-center mb-16 lg:mb-20">
-          <div className="space-y-8 lg:space-y-10">
-            <div className="space-y-6">
+        <div className="grid gap-6 lg:gap-8 xl:gap-12 lg:grid-cols-2 items-center mb-12 lg:mb-16">
+          <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-4">
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                 Our Story
               </h3>
-              <div className="space-y-4 text-lg leading-relaxed text-gray-600">
+              <div className="space-y-3 text-lg leading-relaxed text-gray-600">
                 <p>
                   Budgetify was born from a simple observation: small and medium businesses were being priced out of
                   effective digital marketing. Traditional agencies demanded hefty retainers, leaving many businesses 
@@ -75,7 +75,7 @@ export default function AboutUsSection() {
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
                 Our Mission
               </h3>
@@ -109,9 +109,9 @@ export default function AboutUsSection() {
         </div>
 
         {/* Redesigned Stats Section */}
-        <div className="space-y-12">
+        <div className="space-y-8">
           <div className="text-center">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 leading-tight">
               Our Impact in Numbers
             </h3>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -119,35 +119,35 @@ export default function AboutUsSection() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon
               return (
                 <Card key={index} className={`relative overflow-hidden border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm group ${stat.bgColor}`}>
-                  <CardContent className="p-6 md:p-8 text-center">
+                  <CardContent className="p-4 md:p-6 text-center">
                     {/* Background decoration */}
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-white/30 rounded-full -translate-y-10 translate-x-10 opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-white/30 rounded-full -translate-y-8 translate-x-8 opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                     
                     {/* Icon */}
-                    <div className="relative flex justify-center mb-6">
-                      <div className="flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-white/80 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                        <IconComponent className="h-8 w-8 md:h-10 md:w-10 text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
+                    <div className="relative flex justify-center mb-4">
+                      <div className="flex h-12 w-12 md:h-16 md:w-16 items-center justify-center rounded-full bg-white/80 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <IconComponent className="h-6 w-6 md:h-8 md:w-8 text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
                       </div>
                     </div>
                     
                     {/* Number */}
-                    <div className="relative mb-3">
-                      <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                    <div className="relative mb-2">
+                      <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                         {stat.number}
                       </div>
                     </div>
                     
                     {/* Label */}
-                    <div className="relative mb-4">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
+                    <div className="relative mb-3">
+                      <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-1">
                         {stat.label}
                       </h4>
-                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                      <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                         {stat.description}
                       </p>
                     </div>
@@ -161,9 +161,9 @@ export default function AboutUsSection() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="bg-gradient-to-br from-white via-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12 shadow-xl border border-blue-100">
-            <div className="text-center mb-8">
-              <h4 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-gradient-to-br from-white via-blue-50 to-indigo-50 rounded-2xl p-6 md:p-8 shadow-xl border border-blue-100">
+            <div className="text-center mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                 Trusted by Businesses Worldwide
               </h4>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -171,7 +171,7 @@ export default function AboutUsSection() {
               </p>
             </div>
             
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
               <div className="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full shadow-sm">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (

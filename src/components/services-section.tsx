@@ -50,15 +50,15 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="w-full py-8 md:py-16 lg:py-24 bg-white">
+    <section id="services" className="w-full py-6 md:py-12 lg:py-16 bg-white">
       <div className="container px-4 md:px-6 lg:px-8 mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 lg:mb-16">
-          <div className="space-y-4 lg:space-y-6">
+        <div className="flex flex-col items-center justify-center space-y-3 text-center mb-8 lg:mb-12">
+          <div className="space-y-3 lg:space-y-4">
             <div className="inline-block rounded-full bg-blue-100 px-4 py-2 text-sm text-blue-800 font-medium shadow-sm">
               Our Services
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
               Complete Digital Marketing{" "}
               <span className="text-blue-600">Solutions</span>
             </h2>
@@ -70,13 +70,13 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon
             return (
               <Card
                 key={index}
-                className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-100 ${
+                className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-300 ${
                   service.popular 
                     ? "ring-2 ring-blue-500 shadow-lg bg-gradient-to-br from-blue-50 to-white" 
                     : "hover:ring-2 hover:ring-blue-200"
@@ -87,53 +87,44 @@ export default function ServicesSection() {
                     Most Popular
                   </div>
                 )}
-                <CardHeader className="pb-4">
-                  <div className="flex items-start gap-4">
-                    <div className={`flex h-14 w-14 items-center justify-center rounded-xl shadow-lg ${
+                <CardHeader className="pb-2">
+                  <div className="flex items-start gap-3">
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-xl shadow-lg ${
                       service.popular 
                         ? "bg-gradient-to-r from-blue-600 to-purple-600" 
                         : "bg-blue-100"
                     }`}>
-                      <IconComponent className={`h-7 w-7 ${
+                      <IconComponent className={`h-6 w-6 ${
                         service.popular ? "text-white" : "text-blue-600"
                       }`} />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl lg:text-2xl font-bold text-gray-900 leading-tight">
+                      <CardTitle className="text-lg lg:text-xl font-bold text-gray-900 leading-tight">
                         {service.title}
                       </CardTitle>
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <CardDescription className="text-gray-600 text-base leading-relaxed">
+                <CardContent className="space-y-3">
+                  <CardDescription className="text-gray-600 text-sm leading-relaxed -mt-2">
                     {service.description}
                   </CardDescription>
 
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wide">
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 text-xs uppercase tracking-wide">
                       What&apos;s included:
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-3 text-sm md:text-base text-gray-600">
-                          <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-green-500 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center gap-2 text-xs md:text-sm text-gray-600">
+                          <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-green-500 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <Button
-                    className={`w-full mt-6 py-3 text-base font-semibold transition-all duration-300 ${
-                      service.popular 
-                        ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl" 
-                        : "bg-gray-900 hover:bg-gray-800 shadow-md hover:shadow-lg"
-                    }`}
-                  >
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+
                 </CardContent>
               </Card>
             )
