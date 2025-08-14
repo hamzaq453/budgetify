@@ -31,17 +31,19 @@ export default function FooterSection() {
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-3 text-gray-300 text-sm md:text-base">
                 <Phone className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                <span>(555) 123-4567</span>
+                <span>+92 3221 173487</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300 text-sm md:text-base">
                 <Mail className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                <span>hello@budgetify.com</span>
+                <span>budgetifymarketingagency@gmail.com</span>
               </div>
               <div className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
                 <MapPin className="h-4 w-4 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span>
-                  123 Business Ave, Suite 100<br />
-                  City, ST 12345
+                82 J1 Johar Town
+                        <br />
+                        Lahore, Pakistan <br />
+                  
                 </span>
               </div>
             </div>
@@ -87,8 +89,8 @@ export default function FooterSection() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base">
-                  Blog
+                <Link href="#why-us" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base">
+                  Why Us?
                 </Link>
               </li>
             </ul>
