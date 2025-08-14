@@ -50,7 +50,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 pt-2">
-              <Link href={"#contact"}>
+              <Link href={"https://calendly.com/budgetifymarketingagency/30min"} target="_blank">
               <Button 
                 size="lg" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"

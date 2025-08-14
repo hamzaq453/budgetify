@@ -4,7 +4,7 @@ import Link from "next/link"
 const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "https://facebook.com/budgetify", color: "hover:text-blue-400" },
   { name: "Twitter", icon: Twitter, href: "https://twitter.com/budgetify", color: "hover:text-blue-400" },
-  { name: "Instagram", icon: Instagram, href: "https://instagram.com/budgetify", color: "hover:text-pink-400" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/budgetifymarketingagency/", color: "hover:text-pink-400" },
   { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/budgetify", color: "hover:text-blue-400" },
 ]
 

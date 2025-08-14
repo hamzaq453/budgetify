@@ -21,9 +21,9 @@ const Navbar = () => {
               <Image
                 src="/Logo.png"
                 alt="Budgetify Marketing Agency"
-                width={150}
-                height={150}
-                className="rounded-lg"
+                width={300}
+                height={300}
+                className="rounded-lg h-48 w-48"
               />
               {/* <span className="text-[#3B82F6] font-bold text-xl">
                 Budgetify
@@ -70,10 +70,11 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="/get-quote"
+              href="https://calendly.com/budgetifymarketingagency/30min"
+              target='_blank'
               className="bg-[#3B82F6] hover:bg-[#2563EB] text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 shadow-sm hover:shadow-md"
             >
-              Get Free Quote
+              Get A Quote
             </Link>
           </div>
 
